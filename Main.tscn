@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Paddle/Paddle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Wall/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Paddle/EnnemyPaddle.gd" type="Script" id=3]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=4]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Main" type="Spatial"]
+
+[node name="Paddle" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.122654, 0, 0, 0, 0.378788, 0, 0, 0, 1, -12.575, 1.75628, 0 )
+spring_force = 1000.0
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.35072e-08, 0.0965407, -0.995329, 4.21993e-09, 0.995329, 0.0965407, 1, 4.44089e-16, -4.37114e-08, -19.1644, 4.40708, 0 )
+
+[node name="Ennemy" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.122654, 0, -8.74228e-08, 0, 0.378788, 0, 1.07228e-08, 0, -1, 7.33867, 1, 0 )
+script = ExtResource( 3 )
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1.96186, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Floor" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, 0.3, 0, 0, 0, 3, 0, -0.295519, 0 )
+
+[node name="Ceiling" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, 0.299999, 0, 0, 0, 2.99999, 0.0171227, 8.56695, -0.0111389 )
+
+[node name="Left wall" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, -1.31134e-08, 3, 0, -0.3, -1.31134e-07, 0, 4.13025, -4.2613 )
+
+[node name="Right wall" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, -1.31134e-08, 3, 0, -0.3, -1.31134e-07, 0, 4.13, 4.261 )
+
+[node name="Left incline" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, 0.212132, -0.848528, 0, 0.212132, 0.848528, 0, 0.5, -3.5 )
+
+[node name="TopLeft incline" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, -0.212132, -0.848527, 0, 0.212132, -0.848527, -0.00535203, 7.76757, -3.48264 )
+
+[node name="TopRigth incline" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, -0.212132, 0.848527, 0, -0.212132, -0.848527, -0.00535203, 7.76757, 3.4732 )
+
+[node name="Right incline" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 7.74403, 0, 0, 0, 0.212132, 0.848528, 0, -0.212132, 0.848528, 0, 0.5, 3.5 )
+
+[node name="PlayerGoal" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9184, 4.48975, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="PlayerGoal"]
+transform = Transform( 1, 0, 0, 0, 5.21292, 0, 0, 0, 4.20549, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 0.949885, 0.3126, 0, -0.3126, 0.949885, -10.3572, 3.5411, 0 )
