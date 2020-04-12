@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI.gd" type="Script" id=1]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.950012
+margin_bottom = -0.950012
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="."]
+margin_left = 480.15
+margin_top = 19.85
+margin_right = 524.15
+margin_bottom = 79.85
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player_score" type="Label" parent="."]
+margin_left = 452.2
+margin_top = 30.0
+margin_right = 460.2
+margin_bottom = 44.0
+rect_scale = Vector2( 3.04, 2.96 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ennemy_score" type="Label" parent="."]
+margin_left = 526.75
+margin_top = 30.0
+margin_right = 534.75
+margin_bottom = 44.0
+rect_scale = Vector2( 3.04, 2.96 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
