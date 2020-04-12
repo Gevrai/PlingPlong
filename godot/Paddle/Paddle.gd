@@ -60,3 +60,7 @@ func _input(event):
 
 	get_tree().set_input_as_handled()
 
+
+
+func _on_EnnemyGoal_body_entered(body):
+	pass # Replace with function body.
