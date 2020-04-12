@@ -6,10 +6,36 @@
           body {
               background-color: black;
           }
+          div {
+              margin: auto;
+          }
+          button {
+              display: block;
+              margin: 20px auto;
+              padding: 15px;
+              font-size: 20px;
+              text-align: center;
+              border-radius: 8px;
+              border: 4px solid purple;
+              background-color: #aa00aa;
+          }
+          button:hover {
+              background-color: #ff44ff;
+          }
+          p {
+              text-align: center;
+              font-size: 18px;
+              color: white;
+          }
       </style>
    </head>
 
    <body>
-      <button onclick="window.location.href = 'PlingPlong.html';">PLAY PLING PLONG</button>
+        <div>
+            <button onclick="window.location.href = 'PlingPlong.html';">PLAY PLING PLONG</button>
+            <p>Made with <a href="https://godotengine.org/">Godot engine</a></p>
+            <p>Github: <a href="https://github.com/Gevrai/PlingPlong">github.com/Gevrai/PlingPlong</a></p>
+        </div>
    </body>
+
 </html>
