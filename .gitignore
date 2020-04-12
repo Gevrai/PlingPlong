@@ -5,3 +5,5 @@
 bin/
 build/
 lib/
+
+server/node_modules/
