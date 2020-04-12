@@ -2,9 +2,9 @@
   "name": "pling-plong",
   "version": "1.0.0",
   "description": "First game with godot engine!",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

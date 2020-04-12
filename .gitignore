@@ -6,4 +6,4 @@ bin/
 build/
 lib/
 
-server/node_modules/
+node_modules/
